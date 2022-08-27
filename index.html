@@ -85,7 +85,7 @@
     <main class="container-fluid h-100 px-5 pt-5">
       <div class="row pt-5">
         <div class="col-12 col-md-6">
-          <h1>convert kilometers to miles</h1>
+          <h1 class="logoFont">convert<span class="logoFontBold">me</span></h1>
           <p class="lead">
             Write a function that takes a number parameter in kilometers
             converts the number to miles. Return the converted number.
@@ -98,7 +98,7 @@
             <strong>Extra Credit:</strong> other conversions: fahrenheit to
             celsius, meters to feet, ETC.
           </p>
-
+          <!-- form group kilos -->
           <div class="form-group">
             <input
               type="number"
@@ -112,8 +112,56 @@
             >
           </div>
           <div class="mt-1 text-end">
-            <button id="btnSubmit" type="button" class="btn btn-warning">
-              Convert
+            <button
+              id="btnSubmit"
+              type="button"
+              class="btn btn-warning btn-outline-primary mb-3"
+            >
+              Convert Kilometers to Miles
+            </button>
+          </div>
+          <!-- form group Celsuius -->
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control"
+              id="InputValue2"
+              aria-describedby="cHelp"
+              placeholder="Enter Celsuius value"
+            />
+            <small id="cHelp" class="form-text text-muted"
+              >Enter a number in Celsuius</small
+            >
+          </div>
+          <div class="mt-1 text-end">
+            <button
+              id="btnSubmit"
+              type="button"
+              class="btn btn-warning btn-outline-primary mb-3"
+            >
+              Convert Celsuius to Fahrenheit
+            </button>
+          </div>
+          <!-- form group Grams -->
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control"
+              id="InputValue2"
+              aria-describedby="mHelp"
+              placeholder="Enter meter value"
+            />
+            <small id="mHelp" class="form-text text-muted"
+              >Enter a number in grams</small
+            >
+          </div>
+          <div class="mt-1 text-end">
+            <button
+              id="btnSubmit"
+              type="button"
+              class="btn btn-warning btn-outline-primary"
+            >
+              Convert grams to ounces
             </button>
           </div>
           <div id="results" class="display-6">Result Goes Here</div>
