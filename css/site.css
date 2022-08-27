@@ -43,25 +43,7 @@ h6 {
   background-color: var(--sjw-background-color) !important;
 }
 
-.jsicon {
-  color: rgb(226, 211, 4);
-}
 
-.bsicon {
-  color: purple;
-}
-
-.htmlicon {
-  color: #ff4500;
-}
-
-.cssicon {
-  color: #0b52d6;
-}
-
-.checkListIcon {
-  color: var(--sjw-secondary-color);
-}
 
 /*--button styles override Bootstrap styles--*/
 .btn.outline-primary {
