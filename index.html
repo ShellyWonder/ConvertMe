@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>Code Challenge: A Coding Project by SJ Wonder</title>
+    <title>Convert Me: A Coding Project by SJ Wonder</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -24,6 +24,7 @@
     <link href="css/site.css" rel="stylesheet" />
     <link rel="icon" type="img/png" href="img/favicon/favicon-32x32.png" />
     <!--add ADOBE FONTS LINK HERE-->
+    <link rel="stylesheet" href="https://use.typekit.net/ecv7jcp.css" />
   </head>
 
   <body class="d-flex flex-column h-100">
@@ -36,7 +37,7 @@
             class="p-1"
             width="30"
             height="39"
-          />Project Name</a
+          />Convert<span class="logoFontBold">Me</span></a
         >
         <button
           class="navbar-toggler"
@@ -64,7 +65,7 @@
               <a
                 class="nav-link"
                 target="_blank"
-                href="https://github.com/ShellyWonder/js_speedway2022"
+                href="https://github.com/ShellyWonder/ConversionChallenge"
                 >Git Repo</a
               >
             </li>
@@ -81,49 +82,44 @@
       </div>
     </nav>
     <!--Main section-->
-    <main class="flex-shrink-0">
-      <div class="container col-xxl-8 px-4 py-5">
-        <div class="row g-5 py-5 row-cols-1 row-cols-lg-2">
-          <div class="col order-last order-lg-first">
-            <h1 class="display-5 fw-bold 1h-1 mb-3">
-              <span class="logoFont">NAME</span>: A Coding Challenge
-            </h1>
-            <h4 class="lead">brief description</h4>
-            <p>
-              FUN FACT:
-              <span class="text-black">
-                Even numbers are displayed as<strong> BOLD.</strong></span
-              >
-            </p>
+    <main class="container-fluid h-100 px-5 pt-5">
+      <div class="row pt-5">
+        <div class="col-12 col-md-6">
+          <h1>convert kilometers to miles</h1>
+          <p class="lead">
+            Write a function that takes a number parameter in kilometers
+            converts the number to miles. Return the converted number.
+          </p>
+          <p>
+            <strong>Example:</strong> 1 kilometer is equal to .6214 miles. If
+            you enter 10 it should return 6.21 miles.
+          </p>
+          <p>
+            <strong>Extra Credit:</strong> other conversions: fahrenheit to
+            celsius, meters to feet, ETC.
+          </p>
 
-            <div>
-              <a
-                type="button"
-                class="btn btn-primary btn-lg px-4 me-md-2"
-                href="app.html"
-                >Take a Test Drive!</a
-              >
-            </div>
-            <div class="d-flex">
-              <div class="row">
-                <div class="col">
-                  <h2 class="fw-bold mt-4">MORE INFORMATION</h2>
-                </div>
-              </div>
-            </div>
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control"
+              id="InputValue"
+              aria-describedby="kmHelp"
+              placeholder="Enter km value"
+            />
+            <small id="kmHelp" class="form-text text-muted"
+              >Enter a number in kilometers</small
+            >
           </div>
-
-          <div class="col">
-            <div class="col d-flex align-content-center">
-              <img
-                src="/img/codersATWork.png"
-                class="img-fluid center-block mx-auto"
-                alt="j_s Speedway logo"
-                width="700"
-                height="500"
-              />
-            </div>
+          <div class="mt-1 text-end">
+            <button id="btnSubmit" type="button" class="btn btn-warning">
+              Convert
+            </button>
           </div>
+          <div id="results" class="display-6">Result Goes Here</div>
+        </div>
+        <div class="col-12 col-md-6 order-first order-md-2">
+          <img src="/img/JSChallenge.png" class="img-fluid" />
         </div>
       </div>
     </main>
@@ -178,13 +174,9 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-    <script src="/Challenge01/site01.js"></script>
+    <script src="/js/site.js"></script>
     <script>
       document.getElementById("btnSubmit").addEventListener("click", findHero);
-    </script>
-    <script src="/js/menu.js"></script>
-    <script>
-      window.addEventListener("load", getmenu(1));
     </script>
   </body>
 </html>

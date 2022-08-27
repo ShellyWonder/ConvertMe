@@ -8,8 +8,18 @@
 
 /*change logoFont with each project*/
 .logoFont {
-  font-family: ltc-broadway-engraved, sans-serif;
+font-family: collector-comic, sans-serif;
+
   font-weight: 400;
+
+  font-style: normal;
+}
+
+.logoFontBold {
+  font-family: collector-comic, sans-serif;
+
+  font-weight: 700;
+
   font-style: normal;
 }
 
