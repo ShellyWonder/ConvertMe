@@ -90,14 +90,7 @@
             Write a function that takes a number parameter in kilometers
             converts the number to miles. Return the converted number.
           </p>
-          <p>
-            <strong>Example:</strong> 1 kilometer is equal to .6214 miles. If
-            you enter 10 it should return 6.21 miles.
-          </p>
-          <p>
-            <strong>Extra Credit:</strong> other conversions: fahrenheit to
-            celsius, meters to feet, ETC.
-          </p>
+
           <!-- form group kilos -->
           <div class="form-group">
             <input
@@ -126,20 +119,20 @@
               type="number"
               class="form-control"
               id="InputValue2"
-              aria-describedby="cHelp"
-              placeholder="Enter Celsuius value"
+              aria-describedby="mHelp"
+              placeholder="Enter celsuius value"
             />
-            <small id="cHelp" class="form-text text-muted"
+            <small id="mHelp" class="form-text text-muted"
               >Enter a number in celsuius</small
             >
           </div>
           <div class="mt-1 text-end">
             <button
-              id="btnSubmit"
+              id="btnSubmit2"
               type="button"
               class="btn btn-warning btn-outline-primary mb-3"
             >
-              Convert Celsuius to Fahrenheit
+              Convert Celsius to Fahrenheit
             </button>
           </div>
           <!-- form group Grams -->
@@ -147,9 +140,9 @@
             <input
               type="number"
               class="form-control"
-              id="InputValue2"
+              id="InputValue3"
               aria-describedby="mHelp"
-              placeholder="Enter meter value"
+              placeholder="Enter gram value"
             />
             <small id="mHelp" class="form-text text-muted"
               >Enter a number in grams</small
@@ -157,14 +150,17 @@
           </div>
           <div class="mt-1 text-end">
             <button
-              id="btnSubmit"
+              id="btnSubmit3"
               type="button"
               class="btn btn-warning btn-outline-primary"
             >
-              Convert grams to ounces
+              Convert Grams to Ounces
             </button>
           </div>
-          <div id="results" class="display-6">Result Goes Here</div>
+          <h2>Results</h2>
+          <div id="results" class="display-6"></div>
+          <div id="results2" class="display-6"></div>
+          <div id="results3" class="display-6"></div>
         </div>
         <div class="col-12 col-md-6 order-first order-md-2">
           <img src="/img/convertIMG.png" class="img-fluid" />
@@ -224,7 +220,19 @@
     ></script>
     <script src="/js/site.js"></script>
     <script>
-      document.getElementById("btnSubmit").addEventListener("click", convertIt);
+      document
+        .getElementById("btnSubmit")
+        .addEventListener("click", convertItKm);
+    </script>
+    <script>
+      document
+        .getElementById("btnSubmit2")
+        .addEventListener("click", convertItC);
+    </script>
+    <script>
+      document
+        .getElementById("btnSubmit3")
+        .addEventListener("click", convertItGram);
     </script>
   </body>
 </html>
