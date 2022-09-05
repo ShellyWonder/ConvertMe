@@ -38,8 +38,14 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
-          </li>
+              <a class="nav-link" href="/codeKm.html">The Code KM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/codeCel.html">The Code Cel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/codeGram.html">The Code Gram</a>
+            </li>
           <li class="nav-item">
             <!--CHANGE THIS LINK-->
             <a class="nav-link" target="_blank" href="https://github.com/ShellyWonder/ConversionChallenge">Git Repo</a>
@@ -54,61 +60,37 @@
   <!--Main section-->
   <main class="flex-shrink-0">
     <div class="container py-5 px-5 mt-5">
-      <h2 class="border-1 border-bottom border-dark">The Code</h2>
+      <h2 class="border-1 border-bottom border-dark">The Code - Celsius to Fahrenheit Conversion</h2>
       <div class="row row-cols-1 row-cols-lg-2">
         <!--CODE EMBED-->
         <div class="col-lg-8">
           <pre class="line-numbers">
             <code class="language-javascript">
-              ///INITIATION:
+///INITIATION:
               
-              //Program Entry points
-              function getValues2() {
-              let startValue = document.getElementById("startValue").value;
-              let endValue = document.getElementById("endValue").value;
+//driver function used for display and passing values.
+function convertItC() {
+  
+  let celValue = parseFloat(document.getElementById("InputValue2").value);
+  if (isNaN(celValue) ) {
+    alert("Please enter a number");
+    
+  } else {
+    //call function converting C value to farenheit
+    let farValue = convertToC(celValue);
+    
+    //display results fixed to 2 dec places
+    document.getElementById("results2").innerHTML =
+     `${celValue} degrees Celsius = ${farValue.toFixed(2)} degrees Fahenheit.`;
+  }
 
-              //VALIDATION:
-              startValue = parseInt(startValue);
-              endValue = parseInt(endValue);
-
-              //check to see if input is integer
-              if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-              //generate list of numbers
-              let numbers = generateNumbers(startValue, endValue);
-              displayNumbers(numbers);
-              } else {
-              Swal.fire({
-              icon: "error",
-              title: "oops",
-              text: "only integers are allowed for JS Speedway"
-              })
-              }
-              }
-              //LOGIC:
-              function generateNumbers(start, end) {
-              let numbers = [];
-              for (let index = start; index <= end; index++) { 
-                numbers.push(index); 
-              } 
-              return numbers; 
-            } 
-            //DISPLAY:
-            function displayNumbers(numbers) { 
-              let templateRows="" ; 
-              let className="even" ; 
-              for (let index=0; index < numbers.length; index++) { 
-                  let number=numbers[index]; 
-                  if (number % 2===0) { 
-                  className="even" ; 
-                } else {
-                className="odd" ;
-               } 
-               let row=`<tr><td class="${className}">${number}</td></tr>`;
-                templateRows += row;
-                }
-                document.getElementById("results").innerHTML = templateRows;
-                }
-              
+  //performs equation (Cel * 1.8) + 32 = Farenheit 
+  function convertToC(celValue) {
+  let farValue = 0;
+  farValue = (celValue * 1.8) + 32;
+   return farValue;
+  }
+}
             </code>
           </pre>
         </div>
@@ -118,8 +100,7 @@
           <!--CHANGE THIS LINK-->
           <h5 class="logoFont">Convert<span class="logoFontBold">Me</span></h5>
           <p>
-            <span class="logoFont">Convert</span><span class="logoFontBold">Me</span> is a simple program looping input integers and displaying them to the page. Even numbers are
-            bolded.
+            <span class="logoFont">Convert</span><span class="logoFontBold">Me</span> is a simple program converting the input integer from Celsius to Farenheit and displaying the result to the page.  
           </p>
           <h4>Brief code overview:</h4>
           <ul>
@@ -128,52 +109,36 @@
                 <li>event listener (located in the bottom &lt;script&gt; tag) is triggered by a "click" on the "submit"
                   button.
                 </li><br>
-                <li>Inputs from the two user fields ("Start Value" and "End Value") are passed into the "Get Values"
+                <li>Input from the user field ("CelValue") is passed into the "convertItC"
                   function.</li><br>
               </ul>
 
             </li>
             <li>Validation:
               <ul>
-                <li>Inputs are checked to make certain they are integers (numbers) and not strings.</li> <br>
+                <li>Input checked to make certain it is an integer (number) and not a string.</li> <br>
 
-                <li>If inputs are numbers treated as strings, the program parses them to integers.</li><br>
-                <li>If inputs are text, the system will alert the user, "Only integers are allowed for JS Speedway."
+                <li>If input is a number treated as a string, the program parses it to an  integer.</li><br>
+                <li>If input is a text, the system will alert the user, "Please enter a number."
                 </li> <br>
               </ul>
             </li>
             <li>Logic:
-              <p>Within the "Generate Numbers" function, the following processes occur:
-              </p>
+              <p>Within the "convertItC" function, the "convertToC" function is called:
               <ul>
-                <li>the "numbers" array is created</li> <br>
+               <li>the parameter "celValue" is passed </li><br>
+                <li>the conversion equation is executed</li><br>
 
-                <li>the "for" loop passes the start value and increments the number by one. </li><br>
-                <li>the produced number is pushed to the "numbers" array.</li><br>
-
-                <li>Meanwhile, produced numbers are re-introduced into the loop until the incremented number is equal to
-                  the End Value.</li><br>
-                <li>the function returns the "numbers" array.</li><br>
               </ul>
-
             </li>
-
           </ul>
 
           </li>
           <ul>
             <li>Display:
               <ul>
-                <li>Inside the "for" loop: </li> <br>
-                <ul>
-                  <li>A boolean tests each number in the "numbers" array by dividing each number by 2 to determine
-                    whether the number is even. </li><br>
-                  <li>Numbers testing "true" are bolded.</li><br>
-                  <li>Numbers testing "false" are not bolded.</li><br>
-                </ul>
-                <li> "Template Rows" variable injects the "Number" variable (from the "Display Numbers" function) into
-                  the template literal. </li><br>
-                <li>Finally, "Template Rows" are published to the HTML via the "results" class.</li><br>
+                
+                <li>Finally, results are published to the HTML via the "results2" class.</li><br>
               </ul>
           </ul>
           </li>
