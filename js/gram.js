@@ -1,6 +1,7 @@
 import { handleEnterKey } from "./site.js";
 
 document.getElementById("btnSubmit3").addEventListener("click", convertItGram);
+document.getElementById("clearBtn3").addEventListener("click", clearResults);
 handleEnterKey("InputValue3", convertItGram);
 
 function convertItGram() {
@@ -16,6 +17,12 @@ function convertItGram() {
       "results3"
     ).innerHTML = `Result: ${gramValue} grams = ${ounceValue.toFixed(2)} ounces.
        <hr>`;
+       document.getElementById("clearBtn3").classList.remove("d-none");
   }
   
 }
+function clearResults() {
+    document.getElementById("InputValue3").value = "";
+    document.getElementById("results3").innerHTML = "";
+    document.getElementById("clearBtn3").classList.add("d-none");
+  }
