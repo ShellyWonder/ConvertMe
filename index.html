@@ -118,6 +118,8 @@
             >
               Convert Kilometers to Miles
             </button>
+            <div id="results" class="display-6"></div>
+         
           </div>
           <!-- form group Celsuius -->
           <div class="form-group">
@@ -138,9 +140,11 @@
               type="button"
               class="btn btn-warning btn-outline-primary mb-3"
             >
+        
               Convert Celsius to Fahrenheit
             </button>
-          </div>
+            <div id="results2" class="display-6"></div>
+             </div>
           <!-- form group Grams -->
           <div class="form-group">
             <input
@@ -162,11 +166,9 @@
             >
               Convert Grams to Ounces
             </button>
+              <div id="results3" class="display-6"></div>
+          
           </div>
-          <h2>Results</h2>
-          <div id="results" class="display-6"></div>
-          <div id="results2" class="display-6"></div>
-          <div id="results3" class="display-6"></div>
         </div>
         <div class="col-12 col-md-6 order-first order-md-2">
           <img src="/img/convertIMG.png" class="img-fluid" />
@@ -178,8 +180,8 @@
       <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-3 gy-2">
           <div class="col order-last order-lg-first text-light">
-            <div>
-              <span class="text-muted">&copy;2022</span>&nbsp;SJ Wonder |
+            <div>&copy;
+              <span class="text-muted" id="copyrightYear"></span>&nbsp;SJ Wonder |
               <a href="mailto:shelly@wonderwebdev.com">
                 shelly@wonderwebdev.com</a
               >
@@ -225,20 +227,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/site.js"></script>
-    <script>
-      document
-        .getElementById("btnSubmit")
-        .addEventListener("click", convertItKm);
-    </script>
-    <script>
-      document
-        .getElementById("btnSubmit2")
-        .addEventListener("click", convertItC);
-    </script>
-    <script>
-      document
-        .getElementById("btnSubmit3")
-        .addEventListener("click", convertItGram);
-    </script>
-  </body>
+    <script type="module" src="/js/km.js"></script>
+    <script type="module" src="/js/cel.js"></script>
+    <script type="module" src="/js/gram.js"></script>
+   </body>
 </html>
