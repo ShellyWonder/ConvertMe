@@ -37,7 +37,14 @@ h5,
 h6 {
   color: var(--primary-color);
 }
-
+hr {
+  border-top: 1.5rem solid var(--sjw-primary-color);
+  margin-bottom: 3.5rem;
+}
+.lead{
+  color: var(--sjw-secondary-color);
+  font-weight: bold;
+}
 /*Navbar styles*/
 .bg-dark {
   background-color: var(--sjw-background-color) !important;
