@@ -1,4 +1,4 @@
-import { handleEnterKey } from "./site.js";
+import { handleEnterKey, clearResults } from "./site.js";
 
 document.getElementById("btnSubmit3").addEventListener("click", convertItGram);
 document.getElementById("clearBtn3").addEventListener("click", clearResults);
@@ -21,8 +21,4 @@ function convertItGram() {
   }
   
 }
-function clearResults() {
-    document.getElementById("InputValue3").value = "";
-    document.getElementById("results3").innerHTML = "";
-    document.getElementById("clearBtn3").classList.add("d-none");
-  }
+
