@@ -88,99 +88,112 @@
       </div>
     </nav>
     <!--Main section-->
-    <main class="container-fluid h-100 px-5 pt-5">
-      <div class="row pt-5">
-        <div class="col-12 col-md-6">
-          <h1 class="logoFont">convert<span class="logoFontBold">me</span></h1>
-          <p class="lead">
-            Input a number to convert it from metric to imperial (USA)
-            measurement.
-          </p>
+    <main class="flex-shrink-0">
+      <div class="container-fluid h-100 px-5 pt-5">
+        <div class="row pt-5">
+          <div class="col-12 col-md-6">
+            <h1 class="logoFont logoGradient">
+              convert<span class="logoFontBold">me</span>
+            </h1>
+            <p class="lead">
+              Input a number to convert it from metric to imperial (USA)
+              measurement.
+            </p>
 
-          <!-- form group kilos -->
-          <div class="form-group">
-            <input
-              type="number"
-              class="form-control"
-              id="InputValue"
-              aria-describedby="kmHelp"
-              placeholder="Enter km value"
-            />
-            <small id="kmHelp" class="form-text text-muted"
-              >Enter a number in kilometers</small
-            >
-          </div>
-          <div class="mt-1 text-end">
-            <button
-              id="btnSubmit"
-              type="button"
-              class="btn btn-warning btn-outline-primary mb-3"
-            >
-              Convert Kilometers to Miles
-            </button>
-            <button id="clearBtn" type="button" class="btn btn-secondary mb-3 d-none">
-              Clear
-            </button>
-            <div id="results" class="display-6"></div>
-         
-          </div>
-          <!-- form group Celsuius -->
-          <div class="form-group">
-            <input
-              type="number"
-              class="form-control"
-              id="InputValue2"
-              aria-describedby="mHelp"
-              placeholder="Enter celsius value"
-            />
-            <small id="mHelp" class="form-text text-muted"
-              >Enter a number in celsius</small
-            >
-          </div>
-          <div class="mt-1 text-end">
-            <button
-              id="btnSubmit2"
-              type="button"
-              class="btn btn-warning btn-outline-primary mb-3"
-            >
-        
-              Convert Celsius to Fahrenheit
-            </button>
-            <button id="clearBtn2" type="button" class="btn btn-secondary mb-3 d-none">
-              Clear
-            </button>
-            <div id="results2" class="display-6"></div>
-             </div>
-          <!-- form group Grams -->
-          <div class="form-group">
-            <input
-              type="number"
-              class="form-control"
-              id="InputValue3"
-              aria-describedby="mHelp"
-              placeholder="Enter gram value"
-            />
-            <small id="mHelp" class="form-text text-muted"
-              >Enter a number in grams</small
-            >
-          </div>
-          <div class="mt-1 text-end">
-            <button
-              id="btnSubmit3"
-              type="button"
-              class="btn btn-warning btn-outline-primary"
-            >
-              Convert Grams to Ounces
-            </button>
-            <button id="clearBtn3" type="button" class="btn btn-secondary mb-3 d-none">
-              Clear
-            </button>
+            <!-- form group kilos -->
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="InputValue"
+                aria-describedby="kmHelp"
+                placeholder="Enter km value"
+              />
+              <small id="kmHelp" class="form-text text-muted"
+                >Enter a number in kilometers</small
+              >
+            </div>
+            <div class="mt-1 text-end">
+              <button
+                id="btnSubmit"
+                type="button"
+                class="btn btn-warning btn-outline-primary mb-3"
+              >
+                Convert Kilometers to Miles
+              </button>
+              <button
+                id="clearBtn"
+                type="button"
+                class="btn btn-secondary mb-3 d-none"
+              >
+                Clear
+              </button>
+              <div id="results" class="display-6"></div>
+            </div>
+            <!-- form group Celsuius -->
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="InputValue2"
+                aria-describedby="mHelp"
+                placeholder="Enter celsius value"
+              />
+              <small id="mHelp" class="form-text text-muted"
+                >Enter a number in celsius</small
+              >
+            </div>
+            <div class="mt-1 text-end">
+              <button
+                id="btnSubmit2"
+                type="button"
+                class="btn btn-warning btn-outline-primary mb-3"
+              >
+                Convert Celsius to Fahrenheit
+              </button>
+              <button
+                id="clearBtn2"
+                type="button"
+                class="btn btn-secondary mb-3 d-none"
+              >
+                Clear
+              </button>
+              <div id="results2" class="display-6"></div>
+            </div>
+            <!-- form group Grams -->
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="InputValue3"
+                aria-describedby="mHelp"
+                placeholder="Enter gram value"
+              />
+              <small id="mHelp" class="form-text text-muted"
+                >Enter a number in grams</small
+              >
+            </div>
+            <div class="mt-1 text-end">
+              <button
+                id="btnSubmit3"
+                type="button"
+                class="btn btn-warning btn-outline-primary mb-3"
+              >
+                Convert Grams to Ounces
+              </button>
+              <button
+                id="clearBtn3"
+                type="button"
+                class="btn btn-secondary mb-3 d-none"
+              >
+                Clear
+              </button>
               <div id="results3" class="display-6"></div>
-          
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 order-first order-md-2">
-          <img src="/img/convertIMG.png" class="img-fluid" />
+          <div class="col-12 col-md-6 order-first order-md-2">
+            <img src="/img/convertIMG.png" class="img-fluid" />
+          </div>
         </div>
       </div>
     </main>
@@ -189,8 +202,9 @@
       <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-3 gy-2">
           <div class="col order-last order-lg-first text-light">
-            <div>&copy;
-              <span class="text-muted" id="copyrightYear"></span>&nbsp;SJ Wonder |
+            <div>
+              &copy; <span class="text-muted" id="copyrightYear"></span>&nbsp;SJ
+              Wonder |
               <a href="mailto:shelly@wonderwebdev.com">
                 shelly@wonderwebdev.com</a
               >
@@ -239,5 +253,5 @@
     <script type="module" src="/js/km.js"></script>
     <script type="module" src="/js/cel.js"></script>
     <script type="module" src="/js/gram.js"></script>
-   </body>
+  </body>
 </html>
