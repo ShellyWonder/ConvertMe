@@ -5,13 +5,28 @@
   --sjw-secondary-color: #ff993b;
   --sjw-background-color: #01092b;
 }
+html,
+body {
+  height: 100%;
+}
 
-/*change logoFont with each project*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
 .logoFont {
-font-family: collector-comic, sans-serif;
-
+  font-family: collector-comic, sans-serif;
   font-weight: 400;
-
   font-style: normal;
 }
 
@@ -39,10 +54,10 @@ h6 {
 }
 hr {
   border-top: 1.5rem solid var(--sjw-primary-color);
-  
+
   margin-bottom: 3.5rem;
 }
-.lead{
+.lead {
   color: var(--sjw-secondary-color);
   font-weight: bold;
 }
@@ -50,8 +65,6 @@ hr {
 .bg-dark {
   background-color: var(--sjw-background-color) !important;
 }
-
-
 
 /*--button styles override Bootstrap styles--*/
 .btn.outline-primary {
@@ -80,6 +93,26 @@ hr {
   border-color: var(--sjw-secondary-color);
 }
 
+.btn-secondary {
+  color: var(--sjw-dark-color);
+  background-color: transparent;
+  border: 2px solid var(--sjw-secondary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+  color: white;
+  background-color: var(--sjw-secondary-color);
+  border-color: var(--sjw-secondary-color);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+/*--ENDbutton styles--*/
 .odd {
   font-weight: 400;
 }
