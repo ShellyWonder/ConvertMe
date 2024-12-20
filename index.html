@@ -190,6 +190,37 @@
               </button>
               <div id="results3" class="display-6"></div>
             </div>
+            <!-- form group Liters -->
+            <div class="form-group">
+              <input
+                type="number"
+                class="form-control"
+                id="InputValue4"
+                aria-describedby="mHelp"
+                placeholder="Enter liter value"
+              />
+              <small id="mHelp" class="form-text text-muted"
+                >Enter a number in liters</small
+              >
+            </div>
+            <div class="mt-1 text-end">
+              <button
+                id="btnSubmit4"
+                type="button"
+                class="btn btn-warning btn-outline-primary mb-3"
+              >
+                Convert Liters to Fluid Ounces
+              </button>
+              <button
+                id="clearBtn4"
+                type="button"
+                class="btn btn-secondary mb-3 d-none"
+              >
+                Clear
+              </button>
+              <div id="results4" class="display-6"></div>
+            </div>
+
           </div>
           <div class="col-12 col-md-6 order-first order-md-2">
             <img src="/img/convertIMG.png" class="img-fluid" />
@@ -253,5 +284,7 @@
     <script type="module" src="/js/km.js"></script>
     <script type="module" src="/js/cel.js"></script>
     <script type="module" src="/js/gram.js"></script>
+    <script type="module" src="/js/liter.js"></script>
+
   </body>
 </html>
