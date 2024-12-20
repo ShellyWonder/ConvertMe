@@ -12,9 +12,4 @@ export function handleEnterKey(inputId, conversionFunction) {
   });
 }
 
-function clearResults() {
-  document.getElementById("InputValue").value = "";
-  document.getElementById("results").innerHTML = "";
-  document.getElementById("clearBtn").classList.add("d-none");
-}
 

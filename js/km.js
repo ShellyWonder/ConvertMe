@@ -1,4 +1,4 @@
-import { handleEnterKey, clearResults } from "./site.js";
+import { handleEnterKey } from "./site.js";
 
 document.getElementById("btnSubmit").addEventListener("click", convertItKm);
 document.getElementById("clearBtn").addEventListener("click", clearResults);
@@ -22,4 +22,11 @@ function convertItKm() {
        document.getElementById("clearBtn").classList.remove("d-none");
   }
 }
+
+function clearResults() {
+    document.getElementById("InputValue").value = "";
+    document.getElementById("results").innerHTML = "";
+    document.getElementById("clearBtn").classList.add("d-none");
+}
+  
 
