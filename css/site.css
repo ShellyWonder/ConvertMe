@@ -4,6 +4,7 @@
   --sjw-primary-color: #001e43;
   --sjw-secondary-color: #ff993b;
   --sjw-background-color: #01092b;
+  --sjw-gradient-color: linear-gradient(to right, #c33764, #1d2671, #ff993b);
 }
 html,
 body {
@@ -24,18 +25,25 @@ footer {
   flex-shrink: 0;
 }
 
-.logoFont {
+[class*="logoFont"] {
   font-family: collector-comic, sans-serif;
-  font-weight: 400;
   font-style: normal;
 }
 
+.logoFont {
+  font-weight: 400;
+}
+
 .logoFontBold {
-  font-family: collector-comic, sans-serif;
-
   font-weight: 700;
+}
 
-  font-style: normal;
+.logoGradient {
+  color: transparent;
+  background: var(--sjw-gradient-color);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 main > .container {
