@@ -15,7 +15,7 @@ function convertItGram() {
     //displays results fixed to 2 dec places
     document.getElementById(
       "results3"
-    ).innerHTML = `Result: ${gramValue} grams = ${ounceValue.toFixed(2)} ounces.
+    ).innerHTML = `Result: ${gramValue} grams = ${ounceValue.toFixed(2)} ounces
        <hr>`;
        document.getElementById("clearBtn3").classList.remove("d-none");
   }

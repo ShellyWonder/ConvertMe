@@ -17,7 +17,7 @@ function convertItC() {
       "results2"
     ).innerHTML = `Result: ${celValue} degrees Celsius = ${farValue.toFixed(
       2
-    )} degrees Fahenheit.
+    )} degrees Fahenheit
        <hr>`;
        document.getElementById("clearBtn2").classList.remove("d-none");
   }
