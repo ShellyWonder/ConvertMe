@@ -26,30 +26,34 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!formTemplate) {
     console.log("Template element with ID 'formTemplate' is missing.");
   }
+    conversionTypes.forEach((type, index) => {
+      const formClone = formTemplate.content.cloneNode(true);
+    
+      // Replace {id} and {label} in the template
+      const html = formClone.querySelector('.accordion-item').innerHTML
+          .replace(/{id}/g, type.id)
+          .replace(/{label}/g, type.label);
+    
+      formClone.querySelector('.accordion-item').innerHTML = html;
 
-  conversionTypes.forEach((type) => {
-    const formClone = formTemplate.content.cloneNode(true);
+      // Set the first item to be expanded
+      if (index === 0) {
+          formClone.querySelector('.accordion-button').classList.remove('collapsed');
+          formClone.querySelector('.accordion-collapse').classList.add('show');
+      }
 
-    // Update input attributes
-    const input = formClone.querySelector("input");
-    input.setAttribute("id", `input-${type.id}`);
-    input.setAttribute("data-conversion", type.id);
-    input.setAttribute("placeholder", type.placeholder);
+      // Update input attributes
+      const input = formClone.querySelector("input");
+      input.setAttribute("id", `input-${type.id}`);
+      input.setAttribute("data-conversion", type.id);
+      input.setAttribute("placeholder", type.placeholder);
 
-    // Update label
-    const label = formClone.querySelector("small");
-    label.textContent = type.label;
+      // Update other elements as before
+      formClone.querySelector(".btn-submit").setAttribute("data-conversion", type.id);
+      formClone.querySelector(".clear-btn").setAttribute("data-conversion", type.id);
+      formClone.querySelector(".result").setAttribute("data-conversion", type.id);
 
-    // Update buttons and result div
-    formClone
-      .querySelector(".btn-submit")
-      .setAttribute("data-conversion", type.id);
-    formClone
-      .querySelector(".clear-btn")
-      .setAttribute("data-conversion", type.id);
-    formClone.querySelector(".result").setAttribute("data-conversion", type.id);
-
-    // Append to container
-    formContainer.appendChild(formClone);
+      // Append to accordion container
+      document.getElementById("conversionAccordion").appendChild(formClone);
+    });
   });
-});
