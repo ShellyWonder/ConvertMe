@@ -88,8 +88,8 @@
               Input a number to convert it from metric to imperial (USA)
               measurement.
             </p>
-            <!-- form group Template -->
-            <div id="formContainer"></div>
+            <!-- Template populates accordion items here -->
+            <div class="accordion" id="conversionAccordion"></div>
           </div>
           <!-- Right Column: Image Section -->
           <div class="col-12 col-md-6 order-first order-md-2">
@@ -143,20 +143,27 @@
         <!--container close tag-->
       </div>
     </footer>
-
-    <!-- Template for Form Group -->
+    <!-- Template for accordion items -->
     <template id="formTemplate">
-      <div class="form-group">
-        <input type="number" class="form-control" placeholder="Enter value" />
-        <small class="form-text text-muted"></small>
-      </div>
-      <div class="mt-1 text-end">
-        <button class="btn btn-warning btn-outline-primary mb-3 btn-submit">
-          Convert
-        </button>
-        <button class="btn btn-secondary mb-3 d-none clear-btn">Clear</button>
-        <div class="result display-6"></div>
-        <hr />
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{id}" aria-expanded="false" aria-controls="collapse-{id}">
+            {label}
+          </button>
+        </h2>
+        <div id="collapse-{id}" class="accordion-collapse collapse" data-bs-parent="#conversionAccordion">
+          <div class="accordion-body">
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="Enter value" />
+              <small class="form-text text-muted"></small>
+            </div>
+            <div class="mt-1 text-end">
+              <button class="btn btn-warning btn-outline-primary mb-3 btn-submit">Convert</button>
+              <button class="btn btn-secondary mb-3 d-none clear-btn">Clear</button>
+              <div class="result display-6"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </template>
     <!-- Bootstrap JS -->
