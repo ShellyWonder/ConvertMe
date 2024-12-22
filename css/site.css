@@ -74,6 +74,22 @@ hr {
   background-color: var(--sjw-background-color) !important;
 }
 
+/**Accordion styles**/
+.accordion {
+  margin-top: 2rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--sjw-secondary-color);
+  color: white;
+}
+
+.accordion-button:focus {
+  border-color: var(--sjw-secondary-color);
+  box-shadow: 0 0 0 0.25rem rgba(255, 153, 59, 0.25);
+}
+
+
 /*--button styles override Bootstrap styles--*/
 .btn.outline-primary {
   color: var(--sjw-secondary-color);
