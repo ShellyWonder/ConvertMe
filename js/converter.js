@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let result;
       switch (conversionType) {
+        case "meters":
+          result = `Result: ${inputValue} meters = ${(
+            inputValue * 3.28084
+          ).toFixed(2)} feet`;
+
+          break;
         case "km":
           result = `Result: ${inputValue} km = ${(
             inputValue * 0.621371
@@ -38,10 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
             inputValue * 0.035274
           ).toFixed(2)} ounces`;
           break;
+        case "kg":
+          result = `Result: ${inputValue} kg = ${(inputValue * 2.20462).toFixed(
+            2
+          )} lbs`;
+          break;
         case "liters":
           result = `Result: ${inputValue} liters = ${(
-            inputValue * 33.814
-          ).toFixed(2)} fl oz`;
+            inputValue * 0.264172
+          ).toFixed(2)} gallons`;
           break;
         default:
           result = "Conversion type not recognized.";
@@ -73,11 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Add Enter key support for all conversion inputs
-  document.querySelectorAll("input[id^='input-']").forEach(input => {
+  document.querySelectorAll("input[id^='input-']").forEach((input) => {
     input.addEventListener("keypress", (event) => {
       if (event.key === "Enter") {
         const conversionType = input.getAttribute("data-conversion");
-        const submitButton = document.querySelector(`.btn-submit[data-conversion="${conversionType}"]`);
+        const submitButton = document.querySelector(
+          `.btn-submit[data-conversion="${conversionType}"]`
+        );
         submitButton.click();
       }
     });

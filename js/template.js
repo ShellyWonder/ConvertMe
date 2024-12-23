@@ -1,7 +1,12 @@
-//Controls the Form Groups Template
+//Controls the accordion Template
 // Conversion types with labels and placeholders
 document.addEventListener("DOMContentLoaded", () => {
   const conversionTypes = [
+    {
+      id: "meters",
+      label: "Meters to Feet",
+      placeholder: "Enter meters",
+    },
     { id: "km", label: "Kilometers to Miles", placeholder: "Enter kilometers" },
     {
       id: "celsius",
@@ -10,10 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { id: "grams", label: "Grams to Ounces", placeholder: "Enter grams" },
     {
-      id: "liters",
-      label: "Liters to Fluid Ounces",
-      placeholder: "Enter liters",
+      id: "kg",
+      label: "Kilograms to Pounds",
+      placeholder: "Enter kilograms",
     },
+    { id: "liters", label: "Liters to Gallons", placeholder: "Enter liters" },
   ];
 
   // Populate the form container dynamically
