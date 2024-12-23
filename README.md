@@ -39,7 +39,7 @@ To run this project locally, you need:
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/ShellyWonder/Convert-Me.git
+   git clone https://github.com/ShellyWonder/ConvertMe.git
    ```
 2. Navigate to the project directory:
    ```bash
